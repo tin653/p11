@@ -1,0 +1,108 @@
+/* NavBar styling */
+.navbar {
+    padding: 10px 30px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    height: 30px;
+    width: auto;
+}
+
+/* Centered Search Bar */
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 3px;
+    padding: 5px 10px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.navbar-search {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
+    font-size: 14px;
+    color: #8e8e8e;
+    width: 100%;
+}
+
+/* Right-side Icons */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow wrapping to the next line if space is limited */
+    justify-content: flex-end;
+}
+
+/* Icon Styling */
+.navbar-icon {
+    color: #262626;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-icon:hover {
+    color: #3897f0;
+}
+
+/* NavDropdown (Account Menu) */
+.navbar-dropdown {
+    color: black;
+    font-size: 16px;
+}
+
+/* Mobile Responsiveness */
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: row;
+        padding: 15px;
+        align-items: flex-start; /* Align items to start in mobile */
+    }
+
+    /* Hide search bar for small screens */
+    .navbar-search-container {
+        display: none;  /* Hides the search bar */
+        width: 50px;
+    }
+    
+    /* Stack icons vertically for mobile */
+    .navbar-right {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 15px;
+        align-items: flex-start; /* Align icons to the left */
+    }
+    
+    .navbar-center {
+        display: none;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    /* Reduce padding for navbar items on mobile */
+    .navbar-icon {
+        font-size: 18px;
+    }
+}
+
